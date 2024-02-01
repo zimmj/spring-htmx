@@ -1,0 +1,31 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template • TodoMVC</title>
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/htmx.org/1.9.10/dist/htmx.min.js}" defer></script>
+</head>
+<body>
+<section class="random stuff">
+    <header class="header">
+        <h1>HTMX Exmaple with lazy bootstrap</h1>
+    </header>
+    <section class="main">
+        <h2>How to write a site in Java?</h2>
+        <div>Use Strange template language and usually bootstrap, as all JavaScript based library don't work!</div>
+
+        <div>
+            <div id="target">
+
+            </div>
+            <button hx-post="/extra-infos" hx-target="#target">
+                <span>Click me</span>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+</section>
